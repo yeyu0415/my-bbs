@@ -98,12 +98,11 @@
 <h3 id="11-Linux修改profile文件改错了，恢复的方法"><a href="#11-Linux修改profile文件改错了，恢复的方法" class="headerlink" title="11.Linux修改profile文件改错了，恢复的方法"></a>11.Linux修改profile文件改错了，恢复的方法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">在改profile的时候，改出问题了，除了<span class="built_in">cd</span>以外的命令基本都不能用了，</span><br><span class="line">连vi都不能用了，上网查了下，用<span class="built_in">export</span> PATH=/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11R6/bin</span><br><span class="line"></span><br><span class="line">12.</span><br><span class="line"> could not map anonymous shared memory: Cannot allocate memory</span><br><span class="line">postgressql.conf，将如下属性调小</span><br><span class="line">shared_buffers=256MB</span><br><span class="line">     </span><br><span class="line">13.psql: FATAL:  database <span class="string">"pg"</span> does not exist</span><br><span class="line">参考如下：http://blog.csdn.net/wangyezi19930928/article/details/20358369</span><br></pre></td></tr></table></figure>
 <h3 id="14-cassandra创建keyspace"><a href="#14-cassandra创建keyspace" class="headerlink" title="14.cassandra创建keyspace"></a>14.cassandra创建keyspace</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">http://www.cnblogs.com/feiyun126/p/6144294.html</span><br><span class="line">cassandra本地配置</span><br><span class="line">http://www.cnblogs.com/maheng/p/4989582.html</span><br><span class="line"></span><br><span class="line">http://blog.csdn.net/nangongyanya/article/details/54286540</span><br><span class="line"></span><br><span class="line">http://www.cnblogs.com/gaopeng527/p/4755298.html</span><br><span class="line">报如下错误：</span><br><span class="line">Java HotSpot(TM) 64-Bit Server VM warning: INFO: os::commit_memory(0x00000000cba00000, 878706688, 0) failed; error=<span class="string">'Cannot allocate memory'</span> (errno=12)</span><br><span class="line">编辑 /etc/sysctl.conf，修改参数 vm.overcommit_memory = 1，重启服务器或者用户重新登录</span><br></pre></td></tr></table></figure>
 <h3 id="15，卸载rpm"><a href="#15，卸载rpm" class="headerlink" title="15，卸载rpm"></a>15，卸载rpm</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">即卸载命令变为：</span><br><span class="line"><span class="variable">$rpm</span> -e --noscripts wine-20050310-1fc1winehq</span><br><span class="line"></span><br><span class="line">若要查看与RPM关联的scripts，使用--script查询RPM包。</span><br><span class="line">＄rpm -q --scripts package</span><br><span class="line"></span><br><span class="line">卸载时，若系统里有同一程序的多个安装版本要一起删除，可使用--allmatches标记，如</span><br><span class="line">＄ rpm -e --noscripts --allmatches wine</span><br></pre></td></tr></table></figure>
-<p><img src="https://pic1.zhimg.com/50/v2-d41094af40a423eabcc3039c4606aeb6_hd.jpg" alt="Image text"></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/05/my-bbs/" data-id="cjc1misz80000xkghiuzxvxgv" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/01/05/my-bbs/" data-id="cjc1nbu920001rkgh2yogljoa" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -148,7 +147,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/05/hello-world/" data-id="cjc1miszh0001xkghdfrv6dyv" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/01/05/hello-world/" data-id="cjc1nbu8v0000rkghurcn2w60" class="article-share-link">Teilen</a>
       
       
     </footer>
