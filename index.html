@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>My first BBC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="My first BBC">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="My first BBC">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="My first BBC">
+  
+    <link rel="alternate" href="/atom.xml" title="My first BBC" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">My first BBC</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-my-bbs" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/01/05/my-bbs/" class="article-date">
+  <time datetime="2018-01-05T06:48:34.789Z" itemprop="datePublished">2018-01-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/05/my-bbs/">操作linux系统配置</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is MY first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="1-配置repo-cd-etc-yum-repos-d"><a href="#1-配置repo-cd-etc-yum-repos-d" class="headerlink" title="1.配置repo,cd /etc/yum.repos.d"></a>1.配置repo,cd /etc/yum.repos.d</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">baseurl=http://10.35.28.5/repos/rhel-x86_64-server-6.7.z/</span><br><span class="line"></span><br><span class="line">2.yum update ,更新所有缺失的包或者命令</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="3-安装wget命令"><a href="#3-安装wget命令" class="headerlink" title="3.安装wget命令"></a>3.安装wget命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">yum install wget</span><br><span class="line">4.如果遇到下面的问题</span><br><span class="line">./libtool: line 990: g++: <span class="built_in">command</span> not foun</span><br><span class="line">执行下面的语句：</span><br><span class="line">yum -y install gcc+ gcc-c++</span><br><span class="line"></span><br><span class="line">5.如果遇到一下问题</span><br><span class="line">libs/pcrecpp.o:could not <span class="built_in">read</span> symbols: Bad value</span><br><span class="line">collect2: ld returned 1 <span class="built_in">exit</span> status</span><br><span class="line">make[1]: *** [libpcrecpp.la] 错误 1</span><br><span class="line">make[1]: Leaving directory `/usr/app/pcre-8.00<span class="string">'</span></span><br><span class="line"><span class="string">make: *** [all] 错误 2</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">解决办法：./configure --disable-shared --with-pic</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="6-安装httpd"><a href="#6-安装httpd" class="headerlink" title="6.安装httpd"></a>6.安装httpd</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> [参考网页](http://www.linuxidc.com/Linux/2012-06/62289.htm)</span><br><span class="line"></span><br><span class="line">./configure --prefix=/usr/<span class="built_in">local</span>/httpd/ --with-apr=/usr/<span class="built_in">local</span>/apr --with-apr-util=/usr/<span class="built_in">local</span>/apr-util/ -with-pcre=/usr/<span class="built_in">local</span>/pcre/</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="7-设置linux-网络代理"><a href="#7-设置linux-网络代理" class="headerlink" title="7.设置linux 网络代理"></a>7.设置linux 网络代理</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">http_proxy=http://10.175.250.81:8080</span><br><span class="line">https_proxy=http://10.175.250.81:8080</span><br><span class="line"><span class="built_in">export</span> http_proxy</span><br><span class="line"><span class="built_in">export</span> https_proxy</span><br><span class="line"><span class="built_in">export</span>|grep http</span><br><span class="line"></span><br><span class="line">要取消该设置：</span><br><span class="line"><span class="built_in">unset</span> http_proxy</span><br><span class="line"><span class="built_in">unset</span> https_proxy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h3 id="删除yum包"><a href="#删除yum包" class="headerlink" title="删除yum包"></a>删除yum包</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">8.删除yum包</span><br><span class="line">rpm -qa|grep yum|xargs rpm -e --nodeps</span><br><span class="line">强制收删除</span><br><span class="line">rpm -qa |grep CDM|xargs rpm -e --noscripts --allmatches --nodeps</span><br></pre></td></tr></table></figure>
+<h3 id="9-查询yum包是否安装"><a href="#9-查询yum包是否安装" class="headerlink" title="9.查询yum包是否安装"></a>9.查询yum包是否安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa|grep yum</span><br></pre></td></tr></table></figure>
+<h3 id="10-安装yum-参考一下地址"><a href="#10-安装yum-参考一下地址" class="headerlink" title="10.安装yum,参考一下地址"></a>10.安装yum,参考一下地址</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://www.mamicode.com/info-detail-1176717.html</span><br></pre></td></tr></table></figure>
+<h3 id="11-Linux修改profile文件改错了，恢复的方法"><a href="#11-Linux修改profile文件改错了，恢复的方法" class="headerlink" title="11.Linux修改profile文件改错了，恢复的方法"></a>11.Linux修改profile文件改错了，恢复的方法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">在改profile的时候，改出问题了，除了<span class="built_in">cd</span>以外的命令基本都不能用了，</span><br><span class="line">连vi都不能用了，上网查了下，用<span class="built_in">export</span> PATH=/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11R6/bin</span><br><span class="line"></span><br><span class="line">12.</span><br><span class="line"> could not map anonymous shared memory: Cannot allocate memory</span><br><span class="line">postgressql.conf，将如下属性调小</span><br><span class="line">shared_buffers=256MB</span><br><span class="line">     </span><br><span class="line">13.psql: FATAL:  database <span class="string">"pg"</span> does not exist</span><br><span class="line">参考如下：http://blog.csdn.net/wangyezi19930928/article/details/20358369</span><br></pre></td></tr></table></figure>
+<h3 id="14-cassandra创建keyspace"><a href="#14-cassandra创建keyspace" class="headerlink" title="14.cassandra创建keyspace"></a>14.cassandra创建keyspace</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">http://www.cnblogs.com/feiyun126/p/6144294.html</span><br><span class="line">cassandra本地配置</span><br><span class="line">http://www.cnblogs.com/maheng/p/4989582.html</span><br><span class="line"></span><br><span class="line">http://blog.csdn.net/nangongyanya/article/details/54286540</span><br><span class="line"></span><br><span class="line">http://www.cnblogs.com/gaopeng527/p/4755298.html</span><br><span class="line">报如下错误：</span><br><span class="line">Java HotSpot(TM) 64-Bit Server VM warning: INFO: os::commit_memory(0x00000000cba00000, 878706688, 0) failed; error=<span class="string">'Cannot allocate memory'</span> (errno=12)</span><br><span class="line">编辑 /etc/sysctl.conf，修改参数 vm.overcommit_memory = 1，重启服务器或者用户重新登录</span><br></pre></td></tr></table></figure>
+<h3 id="15，卸载rpm"><a href="#15，卸载rpm" class="headerlink" title="15，卸载rpm"></a>15，卸载rpm</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">即卸载命令变为：</span><br><span class="line"><span class="variable">$rpm</span> -e --noscripts wine-20050310-1fc1winehq</span><br><span class="line"></span><br><span class="line">若要查看与RPM关联的scripts，使用--script查询RPM包。</span><br><span class="line">＄rpm -q --scripts package</span><br><span class="line"></span><br><span class="line">卸载时，若系统里有同一程序的多个安装版本要一起删除，可使用--allmatches标记，如</span><br><span class="line">＄ rpm -e --noscripts --allmatches wine</span><br></pre></td></tr></table></figure>
+<p><img src="https://pic1.zhimg.com/50/v2-d41094af40a423eabcc3039c4606aeb6_hd.jpg" alt="Image text" /></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/01/05/my-bbs/" data-id="cjc1misz80000xkghiuzxvxgv" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/01/05/hello-world/" class="article-date">
+  <time datetime="2018-01-05T06:37:06.332Z" itemprop="datePublished">2018-01-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/05/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/01/05/hello-world/" data-id="cjc1miszh0001xkghdfrv6dyv" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/01/05/my-bbs/">操作linux系统配置</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/05/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 yuye<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
