@@ -5,16 +5,19 @@
   
 
   
-  <title>My first BBC</title>
+  <title>操作linux系统配置</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="My first BBC">
+  <meta name="description" content="操作linux系统配置">
+<meta property="og:type" content="website">
+<meta property="og:title" content="操作linux系统配置">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="My first BBC">
+<meta property="og:site_name" content="操作linux系统配置">
+<meta property="og:description" content="操作linux系统配置">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="My first BBC">
+<meta name="twitter:title" content="操作linux系统配置">
+<meta name="twitter:description" content="操作linux系统配置">
   
-    <link rel="alternate" href="/atom.xml" title="My first BBC" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="操作linux系统配置" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -33,8 +36,12 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">My first BBC</a>
+        <a href="/" id="logo">操作linux系统配置</a>
       </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">操作linux系统配置</a>
+        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -64,9 +71,13 @@
     <article id="post-my-bbs" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/01/05/my-bbs/" class="article-date">
-  <time datetime="2018-01-05T06:48:34.789Z" itemprop="datePublished">2018-01-05</time>
+  <time datetime="2018-01-05T08:34:00.000Z" itemprop="datePublished">2018-01-05</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/类别/">类别</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -83,8 +94,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is MY first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="1-配置repo-cd-etc-yum-repos-d"><a href="#1-配置repo-cd-etc-yum-repos-d" class="headerlink" title="1.配置repo,cd /etc/yum.repos.d"></a>1.配置repo,cd /etc/yum.repos.d</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">baseurl=http://10.35.28.5/repos/rhel-x86_64-server-6.7.z/</span><br><span class="line"></span><br><span class="line">2.yum update ,更新所有缺失的包或者命令</span><br></pre></td></tr></table></figure>
+        <h2 id="1-配置repo-cd-etc-yum-repos-d"><a href="#1-配置repo-cd-etc-yum-repos-d" class="headerlink" title="1.配置repo,cd /etc/yum.repos.d"></a>1.配置repo,cd /etc/yum.repos.d</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">baseurl=http://10.35.28.5/repos/rhel-x86_64-server-6.7.z/</span><br><span class="line"></span><br><span class="line">2.yum update ,更新所有缺失的包或者命令</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
 <h3 id="3-安装wget命令"><a href="#3-安装wget命令" class="headerlink" title="3.安装wget命令"></a>3.安装wget命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">yum install wget</span><br><span class="line">4.如果遇到下面的问题</span><br><span class="line">./libtool: line 990: g++: <span class="built_in">command</span> not foun</span><br><span class="line">执行下面的语句：</span><br><span class="line">yum -y install gcc+ gcc-c++</span><br><span class="line"></span><br><span class="line">5.如果遇到一下问题</span><br><span class="line">libs/pcrecpp.o:could not <span class="built_in">read</span> symbols: Bad value</span><br><span class="line">collect2: ld returned 1 <span class="built_in">exit</span> status</span><br><span class="line">make[1]: *** [libpcrecpp.la] 错误 1</span><br><span class="line">make[1]: Leaving directory `/usr/app/pcre-8.00<span class="string">'</span></span><br><span class="line"><span class="string">make: *** [all] 错误 2</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">解决办法：./configure --disable-shared --with-pic</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
@@ -98,13 +108,18 @@
 <h3 id="11-Linux修改profile文件改错了，恢复的方法"><a href="#11-Linux修改profile文件改错了，恢复的方法" class="headerlink" title="11.Linux修改profile文件改错了，恢复的方法"></a>11.Linux修改profile文件改错了，恢复的方法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">在改profile的时候，改出问题了，除了<span class="built_in">cd</span>以外的命令基本都不能用了，</span><br><span class="line">连vi都不能用了，上网查了下，用<span class="built_in">export</span> PATH=/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11R6/bin</span><br><span class="line"></span><br><span class="line">12.</span><br><span class="line"> could not map anonymous shared memory: Cannot allocate memory</span><br><span class="line">postgressql.conf，将如下属性调小</span><br><span class="line">shared_buffers=256MB</span><br><span class="line">     </span><br><span class="line">13.psql: FATAL:  database <span class="string">"pg"</span> does not exist</span><br><span class="line">参考如下：http://blog.csdn.net/wangyezi19930928/article/details/20358369</span><br></pre></td></tr></table></figure>
 <h3 id="14-cassandra创建keyspace"><a href="#14-cassandra创建keyspace" class="headerlink" title="14.cassandra创建keyspace"></a>14.cassandra创建keyspace</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">http://www.cnblogs.com/feiyun126/p/6144294.html</span><br><span class="line">cassandra本地配置</span><br><span class="line">http://www.cnblogs.com/maheng/p/4989582.html</span><br><span class="line"></span><br><span class="line">http://blog.csdn.net/nangongyanya/article/details/54286540</span><br><span class="line"></span><br><span class="line">http://www.cnblogs.com/gaopeng527/p/4755298.html</span><br><span class="line">报如下错误：</span><br><span class="line">Java HotSpot(TM) 64-Bit Server VM warning: INFO: os::commit_memory(0x00000000cba00000, 878706688, 0) failed; error=<span class="string">'Cannot allocate memory'</span> (errno=12)</span><br><span class="line">编辑 /etc/sysctl.conf，修改参数 vm.overcommit_memory = 1，重启服务器或者用户重新登录</span><br></pre></td></tr></table></figure>
 <h3 id="15，卸载rpm"><a href="#15，卸载rpm" class="headerlink" title="15，卸载rpm"></a>15，卸载rpm</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">即卸载命令变为：</span><br><span class="line"><span class="variable">$rpm</span> -e --noscripts wine-20050310-1fc1winehq</span><br><span class="line"></span><br><span class="line">若要查看与RPM关联的scripts，使用--script查询RPM包。</span><br><span class="line">＄rpm -q --scripts package</span><br><span class="line"></span><br><span class="line">卸载时，若系统里有同一程序的多个安装版本要一起删除，可使用--allmatches标记，如</span><br><span class="line">＄ rpm -e --noscripts --allmatches wine</span><br></pre></td></tr></table></figure>
+<blockquote><p>Every interaction is both precious and an opportunity to delight.</p>
+<footer><strong>Seth Godin</strong><cite><a href="http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html" target="_blank" rel="noopener">Welcome to Island Marketing</a></cite></footer></blockquote>
+<figure class="highlight plain"><figcaption><span>Array.map</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array.map(callback[, thisArg])</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/05/my-bbs/" data-id="cjc1nbu920001rkgh2yogljoa" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/01/05/my-bbs/" data-id="cjc1qfpv60002osghxh6crg5c" class="article-share-link">Teilen</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/标签1/">标签1</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/标签2/">标签2</a></li></ul>
+
     </footer>
   </div>
   
@@ -147,7 +162,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/05/hello-world/" data-id="cjc1nbu8v0000rkghurcn2w60" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/01/05/hello-world/" data-id="cjc1qfpuw0000osghq0s1i506" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -164,12 +179,33 @@
           <aside id="sidebar">
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Kategorien</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/类别/">类别</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/标签1/">标签1</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/标签2/">标签2</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/标签1/" style="font-size: 10px;">标签1</a> <a href="/tags/标签2/" style="font-size: 10px;">标签2</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
